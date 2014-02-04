@@ -1,0 +1,17 @@
+                        Text based Map file generator
+                                
+Copyright 2010 - 2014 CRP Henri Tudor. All rights reserved. 
+Any use of this software constitutes full acceptance of all terms of the 
+software's license.
+
+This package provides tools to manage requests to a remote process server using
+
+This package provides tools to create a map file, a resource to be used by an
+instance of MapServer[1]. It is based entirelly on text flushing to disk.
+
+This code is released under the EUPL v1.1 open source licence [1], please read
+the LICENCE file for full details.
+
+[1] http://www.mapserver.org
+[2] http://joinup.ec.europa.eu/software/page/eupl
+
