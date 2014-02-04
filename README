@@ -9,7 +9,7 @@ This package provides tools to manage requests to a remote process server using
 This package provides tools to create a map file, a resource to be used by an
 instance of MapServer[1]. It is based entirelly on text flushing to disk.
 
-This code is released under the EUPL v1.1 open source licence [1], please read
+This code is released under the EUPL v1.1 open source licence [2], please read
 the LICENCE file for full details.
 
 [1] http://www.mapserver.org
