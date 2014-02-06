@@ -19,4 +19,4 @@ Created on Feb 04, 2014
 @author: desousa
 '''
 
-__all__ = ["MapFileText"]
+__all__ = ["Text"]
