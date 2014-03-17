@@ -562,7 +562,7 @@ class MapStyle:
     penWidth = None
     colour = None
 
-    def __init__(self, pen = "1.5", col = "160 0 0"):
+    def __init__(self, pen = "1.5", col = "255 153 51"):
 
         self.penWidth = pen
         self.colour = col
