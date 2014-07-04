@@ -395,6 +395,10 @@ class RasterLayer(Layer):
         text += "    DATA " + self.path + "\n"
         text += "    TEMPLATE \"blank.html\"\n"
         text += "    DUMP TRUE\n"
+                
+        text += "    PROJECTION\n"
+        text += "        \"init=epsg:" + self.epsgCode + "\"\n"
+        text += "    END\n"
         
         text += "    METADATA \n"
         text += "      \"ows_title\" \"" + self.title + "\" \n"
@@ -490,6 +494,10 @@ class VectorLayer(Layer):
         text += "    TYPE           " + str(self.layerType) + "\n"
         text += "    TEMPLATE \"blank.html\"\n"
         text += "    DUMP TRUE\n"
+        
+        text += "    PROJECTION\n"
+        text += "        \"init=epsg:" + self.epsgCode + "\"\n"
+        text += "    END\n"
 
         text += "  METADATA \n"
         text += "    \"DESCRIPTION\" \"" + self.name + "\"\n"
@@ -562,7 +570,7 @@ class MapStyle:
     penWidth = None
     colour = None
 
-    def __init__(self, pen = "1.5", col = "255 153 51"):
+    def __init__(self, pen = "2", col = "255 153 51"):
 
         self.penWidth = pen
         self.colour = col
