@@ -144,8 +144,8 @@ class MapFile:
         """
         
         for i in range (0,len(self.layers)):
-            if self.layers[i].epsgCode is not None:
-                return self.layers[i].epsgCode
+            if layers[i].epsgCode is not None:
+                return layers[i].epsgCode
              
         return self.epsgCode
         
@@ -158,7 +158,7 @@ class MapFile:
         self.calculateBBoxFromLayers()
         
         if self.epsgCode == None:
-            raise Exception(self.ERR_01)
+            raise Exception(self.ERR_01)q
         
         if self.shapePath == None:
             raise Exception(self.ERR_02)
