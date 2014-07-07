@@ -144,8 +144,8 @@ class MapFile:
         """
         
         for i in range (0,len(self.layers)):
-            if layers[i].epsgCode is not None:
-                return layers[i].epsgCode
+            if self.layers[i].epsgCode is not None:
+                return self.layers[i].epsgCode
              
         return self.epsgCode
         
