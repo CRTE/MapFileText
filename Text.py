@@ -143,9 +143,9 @@ class MapFile:
         all layers have the same CRS.
         """
         
-        for i in range (1,len(self.layers)):
-             if layers[i].epsgCode is not None:
-                 return layers[i].epsgCode
+        for i in range (0,len(self.layers)):
+            if self.layers[i].epsgCode is not None:
+                return self.layers[i].epsgCode
              
         return self.epsgCode
         
