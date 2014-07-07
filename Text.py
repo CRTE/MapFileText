@@ -158,7 +158,7 @@ class MapFile:
         self.calculateBBoxFromLayers()
         
         if self.epsgCode == None:
-            raise Exception(self.ERR_01)q
+            raise Exception(self.ERR_01)
         
         if self.shapePath == None:
             raise Exception(self.ERR_02)
