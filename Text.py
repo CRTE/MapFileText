@@ -114,7 +114,7 @@ class MapFile:
         """
         Calculates the minimum bounding box enclosing all the Layers composing
         this map file (listed in the layers attribute) storing the result in the
-        bBox attribute
+        bBox attribute. It assumes all layers have the same CRS.
         """
         
         if len(self.layers) <= 0:
@@ -136,6 +136,19 @@ class MapFile:
                 maxY = self.layers[i].bBox[3]
                 
         self.bBox = (minX, minY, maxX, maxY)
+        
+    def determineCRSFromLayers(self):
+        """
+        Iterates through all layers returning the first CRS found. It assumes 
+        all layers have the same CRS.
+        """
+        
+        for i in range (1,len(self.layers)):
+             if layers[i].epsgCode is not None:
+                 return layers[i].epsgCode
+             
+        return self.epsgCode
+        
                                     
     def mapHeader(self):
         """
@@ -164,7 +177,7 @@ class MapFile:
         text += "  SHAPEPATH   \"" + self.shapePath + "\"\n"
         text += "  IMAGECOLOR  255 255 255 \n"
         text += "  PROJECTION \n"
-        text += "   \"init=epsg:" + self.epsgCode + "\"\n"
+        text += "   \"init=epsg:" + self.determineCRSFromLayers() + "\"\n"
         text += "  END \n\n"
         
         #text += "  IMAGETYPE      GTiff \n\n"
