@@ -618,7 +618,7 @@ class MapStyle:
         text += "      END \n"
         text += "      STYLE \n"
         text += "        OUTLINECOLOR " + self.colour + "\n"
-        text += "        WIDTH        " + self.penWidth + "\n"
+        text += "        OUTLINEWIDTH " + self.penWidth + "\n"
         text += "        ANTIALIAS    TRUE \n"
         text += "      END \n"
 
