@@ -613,7 +613,7 @@ class MapStyle:
 
         text  = "      STYLE \n"
         text += "        COLOR        " + self.colour + "\n"
-        text += "        OPACITY      30 \n"
+        text += "        OPACITY      40 \n"
         text += "        ANTIALIAS    TRUE \n"
         text += "      END \n"
         text += "      STYLE \n"
