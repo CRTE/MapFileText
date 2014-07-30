@@ -408,10 +408,11 @@ class RasterLayer(Layer):
         text += "    DATA " + self.path + "\n"
         text += "    TEMPLATE \"blank.html\"\n"
         text += "    DUMP TRUE\n"
-                
-        text += "    PROJECTION\n"
-        text += "        \"init=epsg:" + self.epsgCode + "\"\n"
-        text += "    END\n"
+          
+        if self.epsgCode <> None:      
+            text += "    PROJECTION\n"
+            text += "        \"init=epsg:" + self.epsgCode + "\"\n"
+            text += "    END\n"
         
         text += "    METADATA \n"
         text += "      \"ows_title\" \"" + self.title + "\" \n"
@@ -508,9 +509,10 @@ class VectorLayer(Layer):
         text += "    TEMPLATE \"blank.html\"\n"
         text += "    DUMP TRUE\n"
         
-        text += "    PROJECTION\n"
-        text += "        \"init=epsg:" + self.epsgCode + "\"\n"
-        text += "    END\n"
+        if self.epsgCode <> None:
+            text += "    PROJECTION\n"
+            text += "        \"init=epsg:" + self.epsgCode + "\"\n"
+            text += "    END\n"
 
         text += "  METADATA \n"
         text += "    \"DESCRIPTION\" \"" + self.name + "\"\n"
