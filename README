@@ -5,10 +5,9 @@ Copyright 2010 - 2019 Luxembourg Institute of Science and Technology.
 All rights reserved. Any use of this software constitutes full acceptance of 
 all terms of the software's license.
 
-This package provides tools to manage requests to a remote process server using
-
-This package provides tools to create a map file, a resource to be used by an
-instance of MapServer [1]. It is based entirelly on text flushing to disk.
+This package provides tools to manage requests to a remote process server. It provides 
+tools to create a map file, a resource to be used by an instance of MapServer [1]. 
+It is based entirely on text flushing to disk.
 
 This code is released under the EUPL v1.1 open source licence [2], please read
 the LICENCE file for full details.
